@@ -7,8 +7,9 @@ wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
 yum -y update 
 
-yum -y install git make gcc g++
+yum -y erase docker
+yum -y install make gcc g++ screen docker-io
 yum -y install npm; npm install -g iced-coffee-script
 yum -y install erlang
 
-cd /opt; git clone https://github.com/elixir-lang/elixir.git;cd elixir; git checkout v1.0.0; make clean install; cd /opt; rm -rf elixir
+cd /opt; git clone https://github.com/elixir-lang/elixir.git;cd elixir; git checkout v1.0.0; make clean install
